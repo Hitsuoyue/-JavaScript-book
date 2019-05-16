@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>2.1 数据类型 · book test</title>
+        <title>2.1 基本类型 · book test</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -134,7 +134,7 @@
                 <a href="section1.html">
             
                     
-                    2.1 数据类型
+                    2.1 基本类型
             
                 </a>
             
@@ -147,7 +147,7 @@
                 <a href="section2.html">
             
                     
-                    2.2 各数据及描述
+                    2.2 引用类型
             
                 </a>
             
@@ -261,7 +261,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >2.1 数据类型</a>
+        <a href=".." >2.1 基本类型</a>
     </h1>
 </div>
 
@@ -276,26 +276,154 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="21-&#x6570;&#x636E;&#x7C7B;&#x578B;">2.1 &#x6570;&#x636E;&#x7C7B;&#x578B;</h2>
-<p><strong>&#x57FA;&#x672C;&#x7C7B;&#x578B;&#xFF1A;</strong></p>
-<blockquote>
+                                <h2 id="21-&#x57FA;&#x672C;&#x7C7B;&#x578B;">2.1 &#x57FA;&#x672C;&#x7C7B;&#x578B;</h2>
+<h3 id="211-undefined">2.1.1 Undefined</h3>
+<p><strong>&#x5B9A;&#x4E49;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> a = <span class="hljs-literal">undefined</span>;
+</code></pre>
+<p>&#x4F7F;&#x7528;var&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x4F46;&#x672A;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x6216;&#x521D;&#x59CB;&#x5316;&#x5176;&#x503C;&#x4E3A;undefined&#x3002;</p>
+<pre><code class="lang-javascript">&#xFF08;<span class="hljs-keyword">var</span> message&#xFF09;&#xFF1B;alert&#xFF08;message&#xFF09;&#xFF1B;<span class="hljs-comment">//undefined</span>
+</code></pre>
+<h3 id="212-null">2.1.2 Null</h3>
+<p><strong>&#x5B9A;&#x4E49;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> a = <span class="hljs-literal">null</span>;
+</code></pre>
+<p>&#x7A7A;&#x5BF9;&#x8C61;&#x6307;&#x9488;&#xFF0C;&#x7528;&#x4E8E;&#x5728;&#x5C06;&#x6765;&#x4FDD;&#x5B58;&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x6837;&#x53EA;&#x8981;&#x68C0;&#x67E5;&#x53D8;&#x91CF;&#x662F;&#x5426;&#x7B49;&#x4E8E;null&#xFF0C;&#x5C31;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x5185;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x4FDD;&#x5B58;&#x4E86;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x3002;</p>
+<p><strong>&#x6CE8;&#xFF1A;</strong></p>
+<pre><code>alert&#xFF08;null == undefined&#xFF09;&#xFF1B; //true
+alert&#xFF08;null === undefined&#xFF09;&#xFF1B; //false
+</code></pre><h3 id="213-boolean">2.1.3 Boolean</h3>
+<p><strong>&#x5B9A;&#x4E49;&#xFF1A;</strong></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> a = <span class="hljs-literal">true</span>;
+<span class="hljs-keyword">let</span> b = <span class="hljs-literal">false</span>;
+</code></pre>
 <ul>
-<li>&#x7A7A;&#x503C; &#xFF08;null&#xFF09;</li>
-<li>&#x5E03;&#x5C14;&#x503C;&#xFF08;boolean&#xFF09;</li>
-<li>&#x6570;&#x5B57; &#xFF08;number&#xFF09;</li>
-<li>&#x5B57;&#x7B26;&#x4E32;&#xFF08;string&#xFF09;</li>
-<li>&#x672A;&#x5B9A;&#x4E49;&#xFF08;undefined&#xFF09;</li>
-<li>symbol&#xFF08;symbol &#x2014;&#x2014; ES6&#x65B0;&#x589E;&#xFF09;</li>
+<li><p>ECMAScript &#x4E2D;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x90FD;&#x6709;&#x4E0E;&#x8FD9;&#x4E24;&#x4E2A; Boolean &#x503C;&#x7B49;&#x4EF7;&#x7684;&#x503C;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;&#x8F6C;&#x578B;&#x51FD;&#x6570; Boolean() &#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Boolean</span>(<span class="hljs-string">&apos;111&apos;</span>) === <span class="hljs-literal">true</span>
+</code></pre>
+</li>
+<li><p>&#x975E;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x975E;&#x96F6;&#x6570;&#x503C;&#x3001;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#x90FD;&#x662F; true&#xFF1B;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Boolean</span>(<span class="hljs-string">&apos;111&apos;</span>) === <span class="hljs-literal">true</span>
+</code></pre>
+</li>
+<li>&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x6570;&#x503C;&#x96F6;&#x6216;NaN&#x3001;null&#x90FD;&#x662F;false&#x3002;<pre><code class="lang-javascript"><span class="hljs-built_in">Boolean</span>(<span class="hljs-string">&apos;text&apos;</span>) === <span class="hljs-literal">true</span><span class="hljs-comment">//true</span>
+<span class="hljs-built_in">Boolean</span>(<span class="hljs-number">2</span>) === <span class="hljs-literal">true</span><span class="hljs-comment">//true</span>
+<span class="hljs-built_in">Boolean</span>({}) === <span class="hljs-literal">true</span><span class="hljs-comment">//true</span>
+<span class="hljs-built_in">Boolean</span>({name: <span class="hljs-string">&apos;jane&apos;</span>}) === <span class="hljs-literal">true</span><span class="hljs-comment">//true</span>
+</code></pre>
+</li>
+<li>&#x6D41;&#x63A7;&#x5236;&#x8BED;&#x53E5;&#xFF08;&#x5982;if&#xFF09;&#x4F1A;&#x81EA;&#x52A8;&#x6267;&#x884C; Boolean &#x8F6C;&#x6362;&#x3002;<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> message = <span class="hljs-string">&apos;hello&apos;</span>;
+<span class="hljs-keyword">if</span>(message){alert(<span class="hljs-string">&apos;value is true&apos;</span>);}  <span class="hljs-comment">//message&#x88AB;&#x81EA;&#x52A8;&#x8F6C;&#x6362;&#x4E3A;&#x5BF9;&#x5E94;&#x7684; Boolean &#x503C;&#xFF08;true&#xFF09;&#x3002;</span>
+</code></pre>
+</li>
 </ul>
-</blockquote>
-<p><strong>&#x590D;&#x6742;&#x7C7B;&#x578B;&#xFF1A;</strong></p>
+<h3 id="214-number">2.1.4 Number</h3>
+<h4 id="2141-&#x5B9A;&#x4E49;">2.1.4.1 &#x5B9A;&#x4E49;</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#x6574;&#x6570;</span>
+<span class="hljs-keyword">let</span> num = <span class="hljs-number">12</span>;
+<span class="hljs-comment">//&#x516B;&#x8FDB;&#x5236;&#xFF1A;&#x7B2C;&#x4E00;&#x4F4D;&#x4E3A;0&#xFF0C;&#x540E;&#x9762;&#x6570;&#x503C;&#x82E5;&#x8D85;&#x51FA;&#x8303;&#x56F4;&#xFF0C;&#x5219;&#x524D;&#x5BFC;&#x96F6;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x5C06;&#x540E;&#x9762;&#x6570;&#x503C;&#x6309;&#x5341;&#x8FDB;&#x5236;&#x89E3;&#x6790;</span>
+<span class="hljs-keyword">let</span> num1 = <span class="hljs-number">070</span>;<span class="hljs-comment">//&#x516B;&#x8FDB;&#x5236;&#x7684;56</span>
+<span class="hljs-keyword">let</span> num2 = <span class="hljs-number">079</span>;<span class="hljs-comment">//&#x65E0;&#x6548;&#x7684;&#x516B;&#x8FDB;&#x5236;&#x6570;&#x503C;&#xFF0C;&#x89E3;&#x6790;&#x4E3A;79</span>
+<span class="hljs-comment">//&#x5341;&#x516D;&#x8FDB;&#x5236;&#xFF1A;&#x524D;&#x4E24;&#x4F4D;&#x4E3A;0x&#xFF0C;&#x540E;&#x8DDF;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#x5B57;</span>
+<span class="hljs-keyword">let</span> num3 = <span class="hljs-number">0xa</span>;  <span class="hljs-comment">//&#x5341;&#x516D;&#x8FDB;&#x5236;&#x7684;10</span>
+<span class="hljs-keyword">let</span> num4 = <span class="hljs-number">0x1f</span>&#xFF1B;  <span class="hljs-comment">//&#x5341;&#x516D;&#x8FDB;&#x5236;&#x7684;31</span>
+</code></pre>
+<h4 id="2142-nan">2.1.4.2 NaN</h4>
+<p>NaN&#xFF08;&#x975E;&#x6570;&#x503C;&#xFF09;&#x2014;&#x2014;&#x7279;&#x6B8A;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x672C;&#x8BE5;&#x8FD4;&#x56DE;&#x6570;&#x503C;&#x7684;&#x64CD;&#x4F5C;&#x6570;&#x672A;&#x8FD4;&#x56DE;&#x6570;&#x503C;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4E0D;&#x629B;&#x51FA;&#x9519;&#x8BEF;&#x3002;</p>
+<p><strong>1.&#x4EFB;&#x4F55;&#x6D89;&#x53CA; NaN &#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x4F1A;&#x8FD4;&#x56DE; NaN &#xFF0C;NaN &#x4E0E;&#x4EFB;&#x4F55;&#x503C;&#x90FD;&#x4E0D;&#x76F8;&#x7B49;&#x3002;</strong></p>
+<pre><code class="lang-javascript">alert(<span class="hljs-literal">NaN</span> == <span class="hljs-literal">NaN</span>);   <span class="hljs-comment">//false</span>
+</code></pre>
+<p><strong>2.isNaN()</strong></p>
+<p>isNaN() &#x51FD;&#x6570;&#x6536;&#x5230;&#x4E00;&#x4E2A;&#x503C;&#x540E;&#xFF0C;&#x4F1A;&#x5C1D;&#x8BD5;&#x5C06;&#x8FD9;&#x4E2A;&#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x8F6C;&#x6362;&#x5219;&#x8FD4;&#x56DE; false&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; true&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">true</span>)<span class="hljs-comment">//false</span>
+<span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">false</span>)<span class="hljs-comment">//false</span>
+<span class="hljs-built_in">isNaN</span>(<span class="hljs-number">1</span>)<span class="hljs-comment">//false</span>
+<span class="hljs-built_in">isNaN</span>(<span class="hljs-string">&apos;1&apos;</span>)<span class="hljs-comment">//false</span>
+<span class="hljs-built_in">isNaN</span>(<span class="hljs-string">&apos;2&apos;</span>)<span class="hljs-comment">//false</span>
+<span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">null</span>)<span class="hljs-comment">//false</span>
+<span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">undefined</span>)<span class="hljs-comment">//true</span>
+<span class="hljs-built_in">isNaN</span>({})<span class="hljs-comment">//true</span>
+<span class="hljs-built_in">isNaN</span>(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{})<span class="hljs-comment">//true</span>
+<span class="hljs-built_in">isNaN</span>(<span class="hljs-string">&apos;2/0&apos;</span>)<span class="hljs-comment">//true</span>
+</code></pre>
+<h4 id="2143-&#x6570;&#x503C;&#x8F6C;&#x6362;">2.1.4.3 &#x6570;&#x503C;&#x8F6C;&#x6362;</h4>
 <blockquote>
-<p><strong>Object:</strong></p>
-<ul>
-<li>Object &#x672C;&#x8D28;&#x4E0A;&#x662F;&#x7531;&#x4E00;&#x7EC4;&#x65E0;&#x5E8F;&#x7684;&#x540D;&#x503C;&#x5BF9;&#x7EC4;&#x6210;&#x3002;</li>
-<li>&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x9664; Object &#x5916;&#xFF0C;&#x8FD8;&#x5305;&#x62EC; Function &#x3001;Array&#x3001;RegExp&#x3001;Date &#x7B49;&#x7B49;&#x3002;</li>
-</ul>
+<p><strong>Number()&#xFF1A;</strong>&#x5C06;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E3A;&#x6570;&#x503C;&#xFF1B;</p>
+<p><strong>parseInt()&#xFF1A;</strong>&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x6574;&#x6570;&#xFF1B;</p>
+<p><strong>parseFloat()&#xFF1A;</strong>&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x6D6E;&#x70B9;&#x6570;&#xFF1B;</p>
 </blockquote>
+<pre><code>Number&#xFF08;&#xFF09;
+var num1 = Number(&quot;Hello world!&quot;); //NaN
+var num2 = Number(&quot;&quot;); //0
+var num3 = Number(&quot;000011&quot;); //11
+var num4 = Number(true); //1
+</code></pre><pre><code>parseInt&#xFF08;&#xFF09;
+var num1 = parseInt(&quot;1234blue&quot;); // 1234
+var num2 = parseInt(&quot;&quot;); // NaN
+var num4 = parseInt(22.5); // 22
+var num6 = parseInt(&quot;70&quot;); // 70
+var num8 = parseInt(&quot;s2131&quot;); // NaN
+var num = parseInt(&quot;0xAF&quot;, 16); //175
+var num1 = parseInt(&quot;AF&quot;, 16); //175
+var num2 = parseInt(&quot;AF&quot;); //NaN
+&#x6307;&#x5B9A;&#x57FA;&#x6570;&#x8F6C;&#x6362;&#xFF1A;
+var num1 = parseInt(&quot;10&quot;, 2); //2 &#xFF08;&#x6309;&#x4E8C;&#x8FDB;&#x5236;&#x89E3;&#x6790;&#xFF09;
+var num2 = parseInt(&quot;10&quot;, 8); //8 &#xFF08;&#x6309;&#x516B;&#x8FDB;&#x5236;&#x89E3;&#x6790;&#xFF09;
+var num3 = parseInt(&quot;10&quot;, 10); //10 &#xFF08;&#x6309;&#x5341;&#x8FDB;&#x5236;&#x89E3;&#x6790;&#xFF09;
+var num4 = parseInt(&quot;10&quot;, 16); //16 &#xFF08;&#x6309;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x89E3;&#x6790;&#xFF09;
+</code></pre><pre><code>parseFloat&#xFF08;&#xFF09;
+&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x5F00;&#x59CB;&#x89E3;&#x6790;&#xFF0C;&#x59CB;&#x7EC8;&#x5FFD;&#x7565;&#x524D;&#x5BFC;&#x96F6;
+var num1 = parseFloat(&quot;1234blue&quot;); //1234 &#xFF08;&#x6574;&#x6570;&#xFF09;
+var num2 = parseFloat(&quot;0xA&quot;); //0
+var num3 = parseFloat(&quot;22.5&quot;); //22.5
+var num4 = parseFloat(&quot;22.34.5&quot;); //22.34
+var num5 = parseFloat(&quot;0908.5&quot;); //908.5
+var num6 = parseFloat(&quot;3.125e7&quot;); //31250000
+</code></pre><h3 id="215-string">2.1.5 String</h3>
+<ul>
+<li>String &#x7C7B;&#x578B;&#x7528;&#x4E8E;&#x8868;&#x793A;&#x7531;&#x96F6;&#x6216;&#x591A;&#x4E2A;16 &#x4F4D;Unicode &#x5B57;&#x7B26;&#x7EC4;&#x6210;&#x7684;&#x5B57;&#x7B26;&#x5E8F;&#x5217;&#xFF0C;&#x5373;&#x5B57;&#x7B26;&#x4E32;&#x3002;</li>
+<li>&#x5B57;&#x7B26;&#x4E32;&#x53EF;&#x4EE5;&#x7531;&#x53CC;&#x5F15;&#x53F7;&#xFF08;&quot;&#xFF09;&#x6216;&#x5355;&#x5F15;&#x53F7;&#xFF08;&apos;&#xFF09;&#x8868;&#x793A;&#xFF0C;&#x4F46;&#x524D;&#x540E;&#x7B26;&#x53F7;&#x5E94;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;</li>
+</ul>
+<h4 id="2151-&#x5B9A;&#x4E49;">2.1.5.1 &#x5B9A;&#x4E49;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> firstName = <span class="hljs-string">&quot;Nicholas&quot;</span>;
+<span class="hljs-keyword">var</span> lastName = <span class="hljs-string">&apos;Zakas&apos;</span>;
+</code></pre>
+<h4 id="2152-tostring">2.1.5.2 toString()</h4>
+<ol>
+<li>&#x6570;&#x503C;&#x3001;&#x5E03;&#x5C14;&#x503C;&#x3001;&#x5BF9;&#x8C61;&#x548C;&#x5B57;&#x7B26;&#x4E32;&#x90FD;&#x6709;&#x4E00;&#x4E2A; toString() &#x65B9;&#x6CD5;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x5B57;&#x7B26;&#x4E32;&#x3002;<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> num = <span class="hljs-number">2</span>; num.toString();<span class="hljs-comment">//&quot;2&quot;</span>
+<span class="hljs-keyword">let</span> flag = <span class="hljs-literal">true</span>; flag.toString();<span class="hljs-comment">//&quot;true&quot;</span>
+<span class="hljs-keyword">let</span> text = <span class="hljs-string">&apos;hello&apos;</span>; text.toString();<span class="hljs-comment">//&quot;hello&quot;</span>
+</code></pre>
+&#x6570;&#x503C;&#x7684; toString() &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x4F20;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x8F93;&#x51FA;&#x6570;&#x503C;&#x7684;&#x57FA;&#x6570;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;<pre><code>var num = 10;
+alert(num.toString()); // &quot;10&quot;  &#x4E0D;&#x4F20;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;10
+alert(num.toString(2)); // &quot;1010&quot;
+alert(num.toString(8)); // &quot;12&quot;
+alert(num.toString(10)); // &quot;10&quot;
+alert(num.toString(16)); // &quot;a&quot;
+</code></pre></li>
+<li>&#x5BF9;&#x8C61;&#x7684; toString() &#x65B9;&#x6CD5;<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> obj = {name: <span class="hljs-string">&apos;jane&apos;</span>};
+obj.toString() <span class="hljs-comment">//&quot;[object Object]&quot;`</span>
+</code></pre>
+</li>
+<li><p>null &#x548C; undefined &#x6CA1;&#x6709; toString() &#x65B9;&#x6CD5;&#x3002;</p>
+</li>
+<li><p>String():
+&#x4E0D;&#x77E5;&#x9053;&#x8981;&#x8F6C;&#x6362;&#x7684;&#x503C;&#x662F;&#x4E0D;&#x662F; null &#x6216; undefined &#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8F6C;&#x578B;&#x51FD;&#x6570; String()&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5C06;&#x4EFB;&#x4F55;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x3002;String()&#x9075;&#x5FAA;&#x4E0B;&#x5217;&#x8F6C;&#x6362;&#x89C4;&#x5219;&#xFF1A;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x503C;&#x6709;toString()&#x65B9;&#x6CD5;&#xFF0C;&#x5219;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#xFF08;&#x6CA1;&#x6709;&#x53C2;&#x6570;&#xFF09;&#x5E76;&#x8FD4;&#x56DE;&#x76F8;&#x5E94;&#x7684;&#x7ED3;&#x679C;&#xFF1B;</li>
+<li>&#x5982;&#x679C;&#x503C;&#x662F;null&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&quot;null&quot;&#xFF1B;</li>
+<li>&#x5982;&#x679C;&#x503C;&#x662F;undefined&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&quot;undefined&quot;&#x3002;</li>
+</ul>
+</li>
+</ol>
+<h4 id="2153-string-&#x7684;&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x65B9;&#x6CD5;">2.1.5.3 String &#x7684;&#x5176;&#x4ED6;&#x5E38;&#x7528;&#x65B9;&#x6CD5;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> testStr = <span class="hljs-string">&apos;testStr&apos;</span>;
+testStr.substr(<span class="hljs-number">1</span>,<span class="hljs-number">3</span>) <span class="hljs-comment">//&quot;est&quot; &#x622A;&#x53D6; testStr &#x4ECE;&#x7B2C;1&#x4E2A;&#x5F00;&#x59CB;&#xFF0C;&#x53D6;3&#x4E2A;</span>
+testStr.substring(<span class="hljs-number">1</span>,<span class="hljs-number">4</span>)  <span class="hljs-comment">//&quot;est&quot; &#x622A;&#x53D6; testStr &#x4ECE;&#x7B2C;1&#x4E2A;&#x5F00;&#x59CB;&#xFF0C;&#x5230;&#x7B2C;4&#x4E2A;&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x7B2C;4&#x4E2A;</span>
+testStr.slice(<span class="hljs-number">1</span>,<span class="hljs-number">4</span>)  <span class="hljs-comment">//&quot;est&quot; &#x622A;&#x53D6; testStr &#x4ECE;&#x7B2C;1&#x4E2A;&#x5F00;&#x59CB;&#xFF0C;&#x5230;&#x7B2C;4&#x4E2A;&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x7B2C;4&#x4E2A;</span>
+testStr.substring(<span class="hljs-number">2</span>,<span class="hljs-number">0</span>)  <span class="hljs-comment">//&quot;te&quot;</span>
+testStr.slice(<span class="hljs-number">2</span>,<span class="hljs-number">0</span>)  <span class="hljs-comment">//&quot;&quot;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -328,7 +456,7 @@
                 </a>
                 
                 
-                <a href="section2.html" class="navigation navigation-next " aria-label="Next page: 2.2 各数据及描述">
+                <a href="section2.html" class="navigation navigation-next " aria-label="Next page: 2.2 引用类型">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -339,7 +467,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.1 数据类型","level":"1.3.1","depth":2,"next":{"title":"2.2 各数据及描述","level":"1.3.2","depth":2,"path":"chapter2/section2.md","ref":"./chapter2/section2.md","articles":[]},"previous":{"title":"2. 数据类型","level":"1.3","depth":1,"path":"chapter2/README.md","ref":"./chapter2/README.md","articles":[{"title":"2.1 数据类型","level":"1.3.1","depth":2,"path":"chapter2/section1.md","ref":"./chapter2/section1.md","articles":[]},{"title":"2.2 各数据及描述","level":"1.3.2","depth":2,"path":"chapter2/section2.md","ref":"./chapter2/section2.md","articles":[]},{"title":"2.3 变量赋值","level":"1.3.3","depth":2,"path":"chapter2/section3.md","ref":"./chapter2/section3.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"sylvia","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book test","gitbook":"*"},"file":{"path":"chapter2/section1.md","mtime":"2019-05-16T07:03:15.730Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-16T03:26:08.706Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.1 基本类型","level":"1.3.1","depth":2,"next":{"title":"2.2 引用类型","level":"1.3.2","depth":2,"path":"chapter2/section2.md","ref":"./chapter2/section2.md","articles":[]},"previous":{"title":"2. 数据类型","level":"1.3","depth":1,"path":"chapter2/README.md","ref":"./chapter2/README.md","articles":[{"title":"2.1 基本类型","level":"1.3.1","depth":2,"path":"chapter2/section1.md","ref":"./chapter2/section1.md","articles":[]},{"title":"2.2 引用类型","level":"1.3.2","depth":2,"path":"chapter2/section2.md","ref":"./chapter2/section2.md","articles":[]},{"title":"2.3 变量赋值","level":"1.3.3","depth":2,"path":"chapter2/section3.md","ref":"./chapter2/section3.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"sylvia","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book test","gitbook":"*"},"file":{"path":"chapter2/section1.md","mtime":"2019-05-16T09:50:51.117Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-16T03:26:08.706Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
