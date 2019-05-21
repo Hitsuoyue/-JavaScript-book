@@ -1,4 +1,4 @@
-## 2.2 引用类型
+## 2.2 引用类型 —— Object
 ### 2.2.1 创建对象
 ```javascript
 //“构造函数”语法创建
@@ -49,6 +49,37 @@ info.address//"beijing"
 info['friend']//"tom"
 ```
 
+#### 2.2.2.5 对象的可枚举与不可枚举
+对象的每个属性都有一个描述对象（Descriptor），用来控制该属性。
+
+**Object.getOwnPropertyDescriptor()** 方法返回指定对象上一个自有属性对应的属性描述符。
+
+（自有属性指的是直接赋予该对象的属性，不需要从原型链上进行查找的属性）
+
+**语法：**
+> Object.getOwnPropertyDescriptor(obj, prop)   
+//obj：需要查找的目标对象， prop：目标对象内属性名称
+
+```javascript
+let info = {
+    name: 'jane',   //键"name",值"jane"
+    age: 17 //键"age",值17
+}
+let des = Object.getOwnPropertyDescriptor(info, 'name')
+//des
+{
+    value: "jane", //该属性的值
+    writable: true,   //当且仅当属性的值可以被改变时为true
+    enumerable: true,   //当且仅当指定对象的属性可以被枚举出时，为 true
+    configurable: true  //当且仅当指定对象的属性描述可以被改变或者属性可被删除时，为true
+}
+```
+**不可枚举（enumerable:false）：** 有以下操作会忽略不可枚举的属性。
+* for...in：不可枚举的属性不会被遍历。
+* Object.keys()：不可枚举的属性不会被遍历。
+* JSON.stringify()：不可枚举的属性不会被转换为字符串。
+* Object.assign()： 不可枚举的属性不会被复制。
+
 ### 2.2.3 对象常用方法
 先创建一个对象
 ```javascript
@@ -71,16 +102,86 @@ info.hasOwnProperty('language') //false
 "language" in info  //false
 ```
 
+#### 2.2.3.2 对象遍历
 
+先创建一个对象
 
+```javascript
+let info = {
+    name: 'jane',   //键"name",值"jane"
+    age: 17 //键"age",值17
+}
+Object.defineProperty(info, 'name', {
+  enumerable: true //可枚举
+});
+Object.defineProperty(info, 'age', {
+  enumerable: false //可枚举
+});
+//在原型链上添加属性 —— 先了解，原型链部分后再看
+Object.defineProperty(info, 'eg1', {
+  value: 'view',
+  enumerable: true //可枚举
+});
+Object.defineProperty(info, 'eg2222', {
+  value: 'unview',
+  enumerable: false //不可枚举
+})
+```
 
-  constructor：保存着用于创建当前对象的函数。对于前面的例子而言，构造函数（constructor）
-就是Object()。
-  hasOwnProperty(propertyName)：用于检查给定的属性在当前对象实例中（而不是在实例的原型中）是否存在。其中，作为参数的属性名（propertyName）必须以字符串形式指定（例如：o.hasOwnProperty("name")）。
-  isPrototypeOf(object)：用于检查传入的对象是否是传入对象的原型
-  propertyIsEnumerable(propertyName)：用于检查给定的属性是否能够使用for-in 语句来枚举。与hasOwnProperty()方法一样，作为参数的属性名必须以字符串形式指定。
-  toLocaleString()：返回对象的字符串表示，该字符串与执行环境的地区对应。
-  toString()：返回对象的字符串表示。
-  valueOf()：返回对象的字符串、数值或布尔值表示。通常与toString()方法的返回值相同。
-由于在ECMAScript 中Object 是所有对象的基础，因此所有对象都具有这些基本的属性和方法。
+**1. for ... in** —— 先遍历对象自身的可枚举属性，再遍历继承的可枚举属性。
+```javascript
+for (var index in info) {
+  console.log('key：', index, 'value：', info[index])
+}
+//result 只遍历了自身及原型链上的可枚举属性
+key： name value： jane
+key： eg1 value： view
+```
+
+**2. Object.keys()** —— 返回自身及原型链上的可枚举属性组成的数组，可通过遍历数组来遍历对象。
+```javascript
+Object.keys(info)
+//result 返回自身及原型链上的可枚举属性组成的数组
+["name", "eg1"]
+
+Object.keys(info).forEach(item=>{
+  console.log(item, info[item])
+})
+//result
+name jane
+eg1 view
+```
+
+**3. Reflect.ownKeys()** —— 返回自身及原型链上所有属性组成的数组，可通过遍历数组来遍历对象。
+```javascript
+Reflect.ownKeys(info)
+//result 返回自身及原型链上的所有属性组成的数组，包括不可枚举属性
+["name", "age", "eg1", "eg2222"]
+
+Reflect.ownKeys(info).forEach(item=>{
+  console.log(item, info[item])
+})
+//result
+name jane
+age 17
+eg1 view
+eg2222 unview
+```
+
+**4. Object.getOwnPropertyNames()** —— 返回自身及原型链上所有属性组成的数组（包括不可枚举属性），可通过遍历数组来遍历对象。
+```javascript
+Object.getOwnPropertyNames(info)
+//result 返回自身及原型链上的所有属性组成的数组，包括不可枚举属性
+["name", "age", "eg1", "eg2222"]
+
+Object.getOwnPropertyNames(info).forEach(item=>{
+  console.log(item, info[item])
+})
+//result
+name jane
+age 17
+eg1 view
+eg2222 unview
+```
+
 
