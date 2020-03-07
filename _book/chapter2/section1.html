@@ -17,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
                 
             
                 
@@ -25,7 +25,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
         
@@ -147,7 +147,7 @@
                 <a href="section2.html">
             
                     
-                    2.2 引用类型 —— Object
+                    2.2 引用类型
             
                 </a>
             
@@ -160,20 +160,7 @@
                 <a href="section3.html">
             
                     
-                    2.3 引用类型 —— 其他
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.4" data-path="section4.html">
-            
-                <a href="section4.html">
-            
-                    
-                    2.4 变量赋值
+                    2.3 变量赋值
             
                 </a>
             
@@ -191,7 +178,7 @@
                 <a href="../chapter3/">
             
                     
-                    3. 原型及原型链
+                    3. 原型、继承
             
                 </a>
             
@@ -200,12 +187,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../chapter3/section1.html">
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/section3.1/section1.html">
             
-                <a href="../chapter3/section1.html">
+                <a href="../chapter3/section3.1/section1.html">
             
                     
-                    3.1 数据类型
+                    3.1 函数
             
                 </a>
             
@@ -213,16 +200,100 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../chapter3/section2.html">
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/section3.2/">
             
-                <a href="../chapter3/section2.html">
+                <a href="../chapter3/section3.2/">
             
                     
-                    3.2 各数据及描述
+                    3.2 构造函数
             
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../chapter3/section3.2/section1.html">
+            
+                <a href="../chapter3/section3.2/section1.html">
+            
+                    
+                    3.2.1 Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../chapter3/section3.2/section2.html">
+            
+                <a href="../chapter3/section3.2/section2.html">
+            
+                    
+                    3.2.2 Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../chapter3/section3.2/section3.html">
+            
+                <a href="../chapter3/section3.2/section3.html">
+            
+                    
+                    3.2.3 Date
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../chapter3/section3.2/section4.html">
+            
+                <a href="../chapter3/section3.2/section4.html">
+            
+                    
+                    3.2.4 RegExp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../chapter3/section3.2/section5.html">
+            
+                <a href="../chapter3/section3.2/section5.html">
+            
+                    
+                    3.2.5 Number、String、Boolean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../chapter3/section3.2/section6.html">
+            
+                <a href="../chapter3/section3.2/section6.html">
+            
+                    
+                    3.2.6 Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -231,7 +302,59 @@
                 <a href="../chapter3/section3.html">
             
                     
-                    3.3 变量赋值
+                    3.3 原型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/section4.html">
+            
+                <a href="../chapter3/section4.html">
+            
+                    
+                    3.4 原型链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/section5.html">
+            
+                <a href="../chapter3/section5.html">
+            
+                    
+                    3.5 判断数据类型(构造函数、原型、typeof)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter3/section6.html">
+            
+                <a href="../chapter3/section6.html">
+            
+                    
+                    3.6 模拟面向对象的类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../chapter3/section7.html">
+            
+                <a href="../chapter3/section7.html">
+            
+                    
+                    3.7 ES6 中的 Class
             
                 </a>
             
@@ -310,19 +433,15 @@ alert&#xFF08;null === undefined&#xFF09;&#xFF1B; //false
 <pre><code class="lang-javascript"><span class="hljs-keyword">let</span> a = <span class="hljs-literal">true</span>;
 <span class="hljs-keyword">let</span> b = <span class="hljs-literal">false</span>;
 </code></pre>
+<p>ECMAScript &#x4E2D;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x90FD;&#x6709;&#x4E0E;&#x8FD9;&#x4E24;&#x4E2A; Boolean &#x503C;&#x7B49;&#x4EF7;&#x7684;&#x503C;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;&#x8F6C;&#x578B;&#x51FD;&#x6570; Boolean() &#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x3002;</p>
 <ul>
-<li><p>ECMAScript &#x4E2D;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x90FD;&#x6709;&#x4E0E;&#x8FD9;&#x4E24;&#x4E2A; Boolean &#x503C;&#x7B49;&#x4EF7;&#x7684;&#x503C;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;&#x8F6C;&#x578B;&#x51FD;&#x6570; Boolean() &#x8FDB;&#x884C;&#x8F6C;&#x6362;&#x3002;</p>
-<pre><code class="lang-javascript"><span class="hljs-built_in">Boolean</span>(<span class="hljs-string">&apos;111&apos;</span>) === <span class="hljs-literal">true</span>
+<li>&#x975E;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x975E;&#x96F6;&#x6570;&#x503C;&#x3001;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#x90FD;&#x662F; true&#xFF1B;<pre><code class="lang-javascript"><span class="hljs-built_in">Boolean</span>(<span class="hljs-string">&apos;111&apos;</span>) === <span class="hljs-literal">true</span>
 </code></pre>
 </li>
-<li><p>&#x975E;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x975E;&#x96F6;&#x6570;&#x503C;&#x3001;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#x90FD;&#x662F; true&#xFF1B;</p>
-<pre><code class="lang-javascript"><span class="hljs-built_in">Boolean</span>(<span class="hljs-string">&apos;111&apos;</span>) === <span class="hljs-literal">true</span>
-</code></pre>
-</li>
-<li>&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x6570;&#x503C;&#x96F6;&#x6216;NaN&#x3001;null&#x90FD;&#x662F;false&#x3002;<pre><code class="lang-javascript"><span class="hljs-built_in">Boolean</span>(<span class="hljs-string">&apos;text&apos;</span>) === <span class="hljs-literal">true</span><span class="hljs-comment">//true</span>
+<li>&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x6570;&#x503C;&#x96F6;&#x6216;NaN&#x3001;null&#x3001;undefined &#x90FD;&#x662F;false&#x3002;<pre><code class="lang-javascript"><span class="hljs-built_in">Boolean</span>(<span class="hljs-string">&apos;text&apos;</span>) === <span class="hljs-literal">true</span><span class="hljs-comment">//true</span>
 <span class="hljs-built_in">Boolean</span>(<span class="hljs-number">2</span>) === <span class="hljs-literal">true</span><span class="hljs-comment">//true</span>
 <span class="hljs-built_in">Boolean</span>({}) === <span class="hljs-literal">true</span><span class="hljs-comment">//true</span>
-<span class="hljs-built_in">Boolean</span>({name: <span class="hljs-string">&apos;jane&apos;</span>}) === <span class="hljs-literal">true</span><span class="hljs-comment">//true</span>
+<span class="hljs-built_in">Boolean</span>({<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;jane&apos;</span>}) === <span class="hljs-literal">true</span><span class="hljs-comment">//true</span>
 </code></pre>
 </li>
 <li>&#x6D41;&#x63A7;&#x5236;&#x8BED;&#x53E5;&#xFF08;&#x5982;if&#xFF09;&#x4F1A;&#x81EA;&#x52A8;&#x6267;&#x884C; Boolean &#x8F6C;&#x6362;&#x3002;<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> message = <span class="hljs-string">&apos;hello&apos;</span>;
@@ -414,7 +533,7 @@ alert(num.toString(8)); // &quot;12&quot;
 alert(num.toString(10)); // &quot;10&quot;
 alert(num.toString(16)); // &quot;a&quot;
 </code></pre></li>
-<li>&#x5BF9;&#x8C61;&#x7684; toString() &#x65B9;&#x6CD5;<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> obj = {name: <span class="hljs-string">&apos;jane&apos;</span>};
+<li>&#x5BF9;&#x8C61;&#x7684; toString() &#x65B9;&#x6CD5;<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> obj = {<span class="hljs-attr">name</span>: <span class="hljs-string">&apos;jane&apos;</span>};
 obj.toString() <span class="hljs-comment">//&quot;[object Object]&quot;`</span>
 </code></pre>
 </li>
@@ -469,7 +588,7 @@ testStr.slice(<span class="hljs-number">2</span>,<span class="hljs-number">0</sp
                 </a>
                 
                 
-                <a href="section2.html" class="navigation navigation-next " aria-label="Next page: 2.2 引用类型 —— Object">
+                <a href="section2.html" class="navigation navigation-next " aria-label="Next page: 2.2 引用类型">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -480,7 +599,7 @@ testStr.slice(<span class="hljs-number">2</span>,<span class="hljs-number">0</sp
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.1 基本类型","level":"1.3.1","depth":2,"next":{"title":"2.2 引用类型 —— Object","level":"1.3.2","depth":2,"path":"chapter2/section2.md","ref":"./chapter2/section2.md","articles":[]},"previous":{"title":"2. 数据类型","level":"1.3","depth":1,"path":"chapter2/README.md","ref":"./chapter2/README.md","articles":[{"title":"2.1 基本类型","level":"1.3.1","depth":2,"path":"chapter2/section1.md","ref":"./chapter2/section1.md","articles":[]},{"title":"2.2 引用类型 —— Object","level":"1.3.2","depth":2,"path":"chapter2/section2.md","ref":"./chapter2/section2.md","articles":[]},{"title":"2.3 引用类型 —— 其他","level":"1.3.3","depth":2,"path":"chapter2/section3.md","ref":"./chapter2/section3.md","articles":[]},{"title":"2.4 变量赋值","level":"1.3.4","depth":2,"path":"chapter2/section4.md","ref":"./chapter2/section4.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"sylvia","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book test","gitbook":"*"},"file":{"path":"chapter2/section1.md","mtime":"2019-05-16T09:50:51.117Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-04T09:23:40.351Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.1 基本类型","level":"1.3.1","depth":2,"next":{"title":"2.2 引用类型","level":"1.3.2","depth":2,"path":"chapter2/section2.md","ref":"./chapter2/section2.md","articles":[]},"previous":{"title":"2. 数据类型","level":"1.3","depth":1,"path":"chapter2/README.md","ref":"./chapter2/README.md","articles":[{"title":"2.1 基本类型","level":"1.3.1","depth":2,"path":"chapter2/section1.md","ref":"./chapter2/section1.md","articles":[]},{"title":"2.2 引用类型","level":"1.3.2","depth":2,"path":"chapter2/section2.md","ref":"./chapter2/section2.md","articles":[]},{"title":"2.3 变量赋值","level":"1.3.3","depth":2,"path":"chapter2/section3.md","ref":"./chapter2/section3.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["fontsettings","sharing","lunr","search","highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"livereload":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"sylvia","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book test","gitbook":"*"},"file":{"path":"chapter2/section1.md","mtime":"2019-10-16T08:10:03.698Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-01T11:30:08.794Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -490,15 +609,11 @@ testStr.slice(<span class="hljs-number">2</span>,<span class="hljs-number">0</sp
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         
@@ -510,11 +625,15 @@ testStr.slice(<span class="hljs-number">2</span>,<span class="hljs-number">0</sp
         
     
         
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
 

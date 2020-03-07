@@ -1,0 +1,595 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.5 判断数据类型(构造函数、原型、typeof) · book test</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="sylvia">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="section6.html" />
+    
+    
+    <link rel="prev" href="section4.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    1. 变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    2. 数据类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/section1.html">
+            
+                <a href="../chapter2/section1.html">
+            
+                    
+                    2.1 基本类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/section2.html">
+            
+                <a href="../chapter2/section2.html">
+            
+                    
+                    2.2 引用类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/section3.html">
+            
+                <a href="../chapter2/section3.html">
+            
+                    
+                    2.3 变量赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    3. 原型、继承
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="section3.1/section1.html">
+            
+                <a href="section3.1/section1.html">
+            
+                    
+                    3.1 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="section3.2/">
+            
+                <a href="section3.2/">
+            
+                    
+                    3.2 构造函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="section3.2/section1.html">
+            
+                <a href="section3.2/section1.html">
+            
+                    
+                    3.2.1 Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="section3.2/section2.html">
+            
+                <a href="section3.2/section2.html">
+            
+                    
+                    3.2.2 Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="section3.2/section3.html">
+            
+                <a href="section3.2/section3.html">
+            
+                    
+                    3.2.3 Date
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="section3.2/section4.html">
+            
+                <a href="section3.2/section4.html">
+            
+                    
+                    3.2.4 RegExp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="section3.2/section5.html">
+            
+                <a href="section3.2/section5.html">
+            
+                    
+                    3.2.5 Number、String、Boolean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="section3.2/section6.html">
+            
+                <a href="section3.2/section6.html">
+            
+                    
+                    3.2.6 Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="section3.html">
+            
+                <a href="section3.html">
+            
+                    
+                    3.3 原型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="section4.html">
+            
+                <a href="section4.html">
+            
+                    
+                    3.4 原型链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.5" data-path="section5.html">
+            
+                <a href="section5.html">
+            
+                    
+                    3.5 判断数据类型(构造函数、原型、typeof)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="section6.html">
+            
+                <a href="section6.html">
+            
+                    
+                    3.6 模拟面向对象的类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="section7.html">
+            
+                <a href="section7.html">
+            
+                    
+                    3.7 ES6 中的 Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.5 判断数据类型(构造函数、原型、typeof)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="35-&#x5224;&#x65AD;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x6784;&#x9020;&#x51FD;&#x6570;&#x3001;&#x539F;&#x578B;&#x3001;typeof">3.5 &#x5224;&#x65AD;&#x6570;&#x636E;&#x7C7B;&#x578B;(&#x6784;&#x9020;&#x51FD;&#x6570;&#x3001;&#x539F;&#x578B;&#x3001;typeof)</h3>
+<h4 id="351-typeof">3.5.1 typeof</h4>
+<p><strong>typeof</strong>&#x2014;&#x2014;&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x53D8;&#x91CF;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x80FD;&#x8FD4;&#x56DE;&#x5982;&#x4E0B;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
+<pre><code>&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32; &#x2014;&#x2014; &#x6570;&#x636E;&#x7C7B;&#x578B;
+&apos;undefined&apos; &#x2014;&#x2014; Undefined
+&apos;boolean&apos; &#x2014;&#x2014; Boolean
+&apos;string&apos; &#x2014;&#x2014; String
+&apos;number&apos; &#x2014;&#x2014; Number
+&apos;symbol&apos; &#x2014;&#x2014; Symbol
+&apos;object&apos; &#x2014;&#x2014; Object / Null &#xFF08;Null &#x4E3A;&#x7A7A;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#xFF09;
+&apos;function&apos; &#x2014;&#x2014; Function
+</code></pre><ul>
+<li>typeof &#x8FD4;&#x56DE;&#x7684;&#x7C7B;&#x578B;&#x90FD;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#xFF0C;&#x9700;&#x6CE8;&#x610F;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</li>
+</ul>
+<pre><code>alert(typeof &apos;abcd&apos; === &quot;string&quot;)   =&gt;   true
+alert(typeof &apos;abcd&apos; === String)   =&gt;    false
+</code></pre><ul>
+<li>typeof &#x5BF9;&#x4E8E;Array&#x3001;RegExp&#x3001;Date &#x7C7B;&#x578B;&#x7EDF;&#x4E00;&#x8FD4;&#x56DE; &apos;object&apos;</li>
+</ul>
+<pre><code>alert(typeof [] === &apos;object&apos;)   =&gt;    true
+alert(typeof new Date)   =&gt;    &apos;object&apos;
+</code></pre><ul>
+<li>typeof &#x5BF9;&#x4E8E; function &#x7C7B;&#x578B;&#x7EDF;&#x4E00;&#x8FD4;&#x56DE; &apos;function&apos;</li>
+</ul>
+<pre><code>alert(typeof function(){} === &apos;function&apos;)   =&gt;    true
+</code></pre><ul>
+<li>typeof &#x662F;&#x64CD;&#x4F5C;&#x7B26;&#x800C;&#x975E;&#x51FD;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5706;&#x62EC;&#x53F7;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x4F7F;&#x7528;&#x3002;</li>
+</ul>
+<pre><code>alert&#xFF08;typeof &apos;abcd&apos;&#xFF09;&#xFF1B; /     alert&#xFF08;typeof &#xFF08;&apos;abcd&apos;&#xFF09;&#xFF09;&#xFF1B;
+</code></pre><h4 id="352-instanceof">3.5.2 instanceof</h4>
+<p> &#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x662F;&#x5426;&#x662F;&#x53D8;&#x91CF;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;
+<strong>&#x8BED;&#x6CD5;&#xFF1A;</strong> objectA instanceof constructorB
+<strong>&#x5224;&#x65AD;&#x903B;&#x8F91;&#xFF1A;</strong> &#x53D8;&#x91CF;a&#x7684; <em> proto </em> &#x4E00;&#x5C42;&#x4E00;&#x5C42;&#x5F80;&#x4E0A;&#x627E;&#xFF0C;&#x7528;&#x6765;&#x68C0;&#x6D4B; constructor.prototype &#x662F;&#x5426;&#x5B58;&#x5728;&#x4E8E;&#x53C2;&#x6570; object &#x7684;&#x539F;&#x578B;&#x94FE;&#x4E0A;&#xFF0C;&#x662F;&#x5219;&#x8FD4;&#x56DE; true&#xFF0C;&#x4E0D;&#x662F;&#x5219;&#x8FD4;&#x56DE; false&#x3002;</p>
+<pre><code>    alert([1,2,3] instanceof Array) ---------------&gt; true
+    alert(new Date() instanceof Date) ------------&gt; true
+    alert(function(){this.name=&quot;22&quot;;} instanceof Function) ------------&gt; true
+    alert(function(){this.name=&quot;22&quot;;} instanceof function) ------------&gt; false
+</code></pre><h4 id="353-constructor">3.5.3 constructor</h4>
+<p>&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#x5BF9;&#x5E94;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;</p>
+<pre><code>alert({}.constructor === Object);  =&gt;  true
+alert([].constructor === Array);  =&gt;  true
+alert(&apos;abcde&apos;.constructor === String);  =&gt;  true
+alert((1).constructor === Number);  =&gt;  true
+alert(true.constructor === Boolean);  =&gt;  true
+alert(false.constructor === Boolean);  =&gt;  true
+alert(function s(){}.constructor === Function);  =&gt;  true
+alert(new Date().constructor === Date);  =&gt;  true
+alert(new Array().constructor === Array);  =&gt;  true
+alert(new Error().constructor === Error);  =&gt;  true
+alert(document.constructor === HTMLDocument);  =&gt;  true
+alert(window.constructor === Window);  =&gt;  true
+alert(Symbol().constructor);    =&gt;    undefined
+ Symbol &#x503C;&#x901A;&#x8FC7;Symbol&#x51FD;&#x6570;&#x751F;&#x6210;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#x7684;&#x503C;&#xFF0C;&#x4E0D;&#x662F;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0D;&#x80FD;&#x901A;&#x8FC7; constructor &#x5224;&#x65AD;&#xFF1B;
+null &#x548C; undefined &#x662F;&#x65E0;&#x6548;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x6CA1;&#x6709; constructor&#xFF0C;&#x56E0;&#x6B64;&#x65E0;&#x6CD5;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x5224;&#x65AD;&#x3002;
+</code></pre><blockquote>
+<p>&#x6CE8;&#xFF1A;</p>
+<ul>
+<li>constructor &#x4E0D;&#x80FD;&#x7528;&#x6765;&#x5224;&#x65AD; Null &#x53CA; Undefined &#x7C7B;&#x578B;</li>
+<li><strong>&#x51FD;&#x6570;&#x7684; constructor &#x4E0D;&#x7A33;&#x5B9A;&#x3002;</strong>
+&#x5F53;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x88AB;&#x5B9A;&#x4E49;&#x65F6;&#xFF0C;JS &#x5F15;&#x64CE;&#x4F1A;&#x4E3A;&#x5176;&#x6DFB;&#x52A0; prototype &#x539F;&#x578B;&#xFF0C;&#x7136;&#x540E;&#x5728; prototype &#x4E0A;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; constructor &#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x8BA9;&#x5176;&#x6307;&#x5411;&#x51FD;&#x6570;&#x7684;&#x5F15;&#x7528;&#x3002;
+&#x4F46;&#x51FD;&#x6570;&#x7684; prototype &#x88AB;&#x91CD;&#x5199;&#x540E;&#xFF0C;&#x539F;&#x6709;&#x7684; constructor &#x5F15;&#x7528;&#x4F1A;&#x4E22;&#x5931;&#x3002;&#x518D;&#x6B21;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6B21;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x4F8B;&#x540E;&#xFF0C;&#x5176; constructor &#x6307;&#x5411;&#x7684;&#x5185;&#x5BB9;&#x5DF2;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x3002;
+&#x56E0;&#x6B64;&#x4E3A;&#x4E86;&#x89C4;&#x8303;&#x5F00;&#x53D1;&#xFF0C;&#x5728;&#x91CD;&#x5199;&#x5BF9;&#x8C61;&#x539F;&#x578B;&#x65F6;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x7ED9; constructor &#x8D4B;&#x503C;&#xFF0C;&#x4EE5;&#x4FDD;&#x8BC1;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x7684;&#x7C7B;&#x578B;&#x4E0D;&#x88AB;&#x66F4;&#x6539;&#x3002; </li>
+</ul>
+</blockquote>
+<h4 id="354-objectprototypetostring">3.5.4 Object.prototype.toString()</h4>
+<blockquote>
+<ul>
+<li>toString() &#x662F; Object &#x7684;&#x539F;&#x578B;&#x65B9;&#x6CD5;&#xFF0C;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#xFF0C;&#x9ED8;&#x8BA4;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x7684; [[Class]] &#x3002;</li>
+<li>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5185;&#x90E8;&#x5C5E;&#x6027;&#xFF0C;&#x5176;&#x683C;&#x5F0F;&#x4E3A; [object Xxx] &#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5176;&#x4E2D; Xxx &#x5C31;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;&#x578B;&#x3002;</li>
+<li>&#x5BF9;&#x4E8E; Object &#x5BF9;&#x8C61;&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x7528; toString() &#x5C31;&#x80FD;&#x8FD4;&#x56DE; [object Object] &#x3002;&#x800C;&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x5BF9;&#x8C61;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x901A;&#x8FC7; call / apply &#x6765;&#x8C03;&#x7528;&#x624D;&#x80FD;&#x8FD4;&#x56DE;&#x6B63;&#x786E;&#x7684;&#x7C7B;&#x578B;&#x4FE1;&#x606F;&#x3002;</li>
+</ul>
+</blockquote>
+<pre><code>Object.prototype.toString.call(new Date) === &apos;[object Date]&apos;;   //true
+Object.prototype.toString.call(new String) === &apos;[object String]&apos;;   //true
+Object.prototype.toString.call(Math) === &apos;[object Math]&apos;;   //true
+Object.prototype.toString.call(undefined) === &apos;[object Undefined]&apos;;   //true
+Object.prototype.toString.call(null) ===&apos;[object Null]&apos;;   //true
+Object.prototype.toString.call(&apos;&apos;) === &apos;[object String]&apos; ;      //true 
+Object.prototype.toString.call(123) === &apos;[object Number]&apos; ;       //true
+Object.prototype.toString.call(true) === &apos;[object Boolean]&apos; ;    //true 
+Object.prototype.toString.call(Symbol()) === &apos;[object Symbol]&apos;;    //true
+Object.prototype.toString.call(new Function()) === &apos;[object Function]&apos;;    //true
+Object.prototype.toString.call(new Date()) === &apos;[object Date]&apos; ;    //true
+Object.prototype.toString.call([]) === &apos;[object Array]&apos;;   //true
+Object.prototype.toString.call(new RegExp()) === &apos;[object RegExp]&apos; ;    //true
+Object.prototype.toString.call(new Error()) === &apos;[object Error]&apos;;   //true
+Object.prototype.toString.call(document) === &apos;[object HTMLDocument]&apos;;   //true
+Object.prototype.toString.call(window) === &apos;[object Window]&apos;;   //true
+</code></pre><blockquote>
+<p><strong>&#x7C7B;&#x578B;&#x5224;&#x65AD;&#x5C0F;&#x7ED3;&#xFF1A;</strong></p>
+<ul>
+<li>1&#xFF09;typeof &#x66F4;&#x9002;&#x5408;&#x5224;&#x65AD;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x4E3A;&#x5BF9;&#x4E8E;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x6570;&#x636E;&#xFF0C;typeof &#x53EA;&#x4F1A;&#x8FD4;&#x56DE; &#x2018;function&#x2019; &#x6216; &#x2018;object&#x2019;&#xFF0C;&#x4E0D;&#x4F1A;&#x8FD4;&#x56DE;&#x5176;&#x4ED6;&#x7684;&#x6570;&#x7EC4;&#x7B49;&#x7C7B;&#x578B;&#xFF1B;</li>
+<li>2&#xFF09;instanceof &#x53EA;&#x80FD;&#x7528;&#x6765;&#x5224;&#x65AD;&#x5B9E;&#x4F8B;&#x7C7B;&#x578B;&#xFF0C;&#x5305;&#x62EC; Array&#x3001;Date &#x7B49;&#xFF0C;&#x5224;&#x65AD;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x4F1A;&#x6C38;&#x8FDC;&#x8FD4;&#x56DE; true&#xFF0C;&#x65E0;&#x610F;&#x4E49;&#xFF1B;</li>
+<li>3&#xFF09;constructor &#x4E0D;&#x80FD;&#x7528;&#x6765;&#x5224;&#x65AD; Null &#x53CA; Undefined &#x7C7B;&#x578B;</li>
+<li>4&#xFF09;&#x6CE8;&#xFF1A;new String()&#x3001;new Number() &#x751F;&#x6210;&#x7684;&#x5B9E;&#x9645;&#x4E0A;&#x4E3A;&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x53EA;&#x80FD;&#x901A;&#x8FC7; typeof &#x80FD;&#x5224;&#x65AD;&#x51FA;&#x6765;&#xFF0C;constructor &#x548C; .toString &#x53EA;&#x4F1A;&#x8FD4;&#x56DE; String &#x6216; Number&#xFF0C;&#x65E0;&#x6CD5;&#x5224;&#x65AD;&#x662F;&#x57FA;&#x672C;&#x7C7B;&#x578B;&#x6216;&#x662F;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x3002;</li>
+</ul>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="section4.html" class="navigation navigation-prev " aria-label="Previous page: 3.4 原型链">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="section6.html" class="navigation navigation-next " aria-label="Next page: 3.6 模拟面向对象的类">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.5 判断数据类型(构造函数、原型、typeof)","level":"1.4.5","depth":2,"next":{"title":"3.6 模拟面向对象的类","level":"1.4.6","depth":2,"path":"chapter3/section6.md","ref":"./chapter3/section6.md","articles":[]},"previous":{"title":"3.4 原型链","level":"1.4.4","depth":2,"path":"chapter3/section4.md","ref":"./chapter3/section4.md","articles":[]},"dir":"ltr"},"config":{"plugins":["fontsettings","sharing","lunr","search","highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"livereload":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"sylvia","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book test","gitbook":"*"},"file":{"path":"chapter3/section5.md","mtime":"2019-10-16T12:53:48.263Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-01T11:30:08.794Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+

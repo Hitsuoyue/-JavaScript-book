@@ -27,16 +27,13 @@ alert（null === undefined）； //false
 let a = true;
 let b = false;
 ```
-* ECMAScript 中所有类型的值都有与这两个 Boolean 值等价的值，可使用转型函数 Boolean() 进行转换。
-```javascript
-Boolean('111') === true
-```
+ECMAScript 中所有类型的值都有与这两个 Boolean 值等价的值，可使用转型函数 Boolean() 进行转换。
 
 * 非空字符串、非零数值、任何对象都是 true；
 ```javascript
 Boolean('111') === true
 ```
-* 空字符串、数值零或NaN、null都是false。
+* 空字符串、数值零或NaN、null、undefined 都是false。
 ```javascript
 Boolean('text') === true//true
 Boolean(2) === true//true

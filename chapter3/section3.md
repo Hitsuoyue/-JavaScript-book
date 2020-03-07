@@ -1,114 +1,13 @@
-## 3.3 原型链
-### 3.3.1 原型链结构图
-![原型链](https://user-gold-cdn.xitu.io/2019/5/15/16aba29be9a0926c?w=670&h=359&f=png&s=11854)
+## 3.3 原型
+**所有引用类型其隐式原型都指向它的构造函数的显式原型**
+> obj.\_\_proto\_\_ === Object.prototype
+> * 当试图得到一个对象的某个属性时，如果这个对象本身没有这个属性，会去它的  \_\_proto\_\_ （即其构造函数的 prototype ）中寻找。
 
-当试图得到一个对象的某个属性时，如果这个对象本身没有这个属性，会去它的  _ proto _ （即其构造函数的 prototype ）中寻找。
+**隐式原型：**
+> 所有引用类型（数组、对象、函数），都有一个 \_\_proto\_\_ 属性，属性值是一个普通对象。
 
-### 3.3.2 判断数据类型
-#### 3.3.2.1 typeof
-**typeof**——返回给定变量的数据类型，可能返回如下字符串：
+**显式原型：**
+> 所有的函数都有一个 prototype 属性，属性值是一个普通对象。
 
-```
-返回字符串 —— 数据类型
-'undefined' —— Undefined
-'boolean' —— Boolean
-'string' —— String
-'number' —— Number
-'symbol' —— Symbol
-'object' —— Object / Null （Null 为空对象的引用）
-'function' —— Function
-```
-
-* typeof 返回的类型都是字符串形式，需注意，例如：
-
-```
-alert(typeof 'abcd' === "string")   =>   true
-alert(typeof 'abcd' === String)   =>    false
-```
-
-* typeof 对于Array、RegExp、Date 类型统一返回 'object'
-
-```
-alert(typeof [] === 'object')   =>    true
-alert(typeof new Date)   =>    'object'
-```
-* typeof 对于 function 类型统一返回 'function'
-
-```
-alert(typeof function(){} === 'function')   =>    true
-```
-
-* typeof 是操作符而非函数，所以可以使用圆括号，也可以不使用。
-
-```
-alert（typeof 'abcd'）； /     alert（typeof （'abcd'））；
-```
-#### 3.3.2.2 instanceof 
- 判断一个函数是否是变量的构造函数
-**语法：** objectA instanceof constructorB
-**判断逻辑：** 变量a的 _ proto _ 一层一层往上找，用来检测 constructor.prototype 是否存在于参数 object 的原型链上，是则返回 true，不是则返回 false。
-
-```
-    alert([1,2,3] instanceof Array) ---------------> true
-    alert(new Date() instanceof Date) ------------> true
-    alert(function(){this.name="22";} instanceof Function) ------------> true
-    alert(function(){this.name="22";} instanceof function) ------------> false
-```
-
-#### 3.3.2.3 constructor
-返回对象对应的构造函数
-
-```
-alert({}.constructor === Object);  =>  true
-alert([].constructor === Array);  =>  true
-alert('abcde'.constructor === String);  =>  true
-alert((1).constructor === Number);  =>  true
-alert(true.constructor === Boolean);  =>  true
-alert(false.constructor === Boolean);  =>  true
-alert(function s(){}.constructor === Function);  =>  true
-alert(new Date().constructor === Date);  =>  true
-alert(new Array().constructor === Array);  =>  true
-alert(new Error().constructor === Error);  =>  true
-alert(document.constructor === HTMLDocument);  =>  true
-alert(window.constructor === Window);  =>  true
-alert(Symbol().constructor);    =>    undefined
- Symbol 值通过Symbol函数生成，是一个原始类型的值，不是对象，不能通过 constructor 判断；
-null 和 undefined 是无效的对象，没有 constructor，因此无法通过这种方式来判断。
-```
-
-> 注：
-> * constructor 不能用来判断 Null 及 Undefined 类型
-> * **函数的 constructor 不稳定。**
-> 当一个函数被定义时，JS 引擎会为其添加 prototype 原型，然后在 prototype 上添加一个 constructor 属性，并让其指向函数的引用。
-但函数的 prototype 被重写后，原有的 constructor 引用会丢失。再次新建一个次函数的实例后，其 constructor 指向的内容已发生改变。
-因此为了规范开发，在重写对象原型时，一般都需要重新给 constructor 赋值，以保证对象实例的类型不被更改。 
-
-#### 3.3.2.4 Object.prototype.toString()
-> * toString() 是 Object 的原型方法，调用该方法，默认返回当前对象的 [[Class]] 。
-> * 这是一个内部属性，其格式为 [object Xxx] ，是一个字符串，其中 Xxx 就是对象的类型。
-> * 对于 Object 对象，直接调用 toString() 就能返回 [object Object] 。而对于其他对象，则需要通过 call / apply 来调用才能返回正确的类型信息。
-
-```
-Object.prototype.toString.call(new Date) === '[object Date]';   //true
-Object.prototype.toString.call(new String) === '[object String]';   //true
-Object.prototype.toString.call(Math) === '[object Math]';   //true
-Object.prototype.toString.call(undefined) === '[object Undefined]';   //true
-Object.prototype.toString.call(null) ==='[object Null]';   //true
-Object.prototype.toString.call('') === '[object String]' ;      //true 
-Object.prototype.toString.call(123) === '[object Number]' ;       //true
-Object.prototype.toString.call(true) === '[object Boolean]' ;    //true 
-Object.prototype.toString.call(Symbol()) === '[object Symbol]';    //true
-Object.prototype.toString.call(new Function()) === '[object Function]';    //true
-Object.prototype.toString.call(new Date()) === '[object Date]' ;    //true
-Object.prototype.toString.call([]) === '[object Array]';   //true
-Object.prototype.toString.call(new RegExp()) === '[object RegExp]' ;    //true
-Object.prototype.toString.call(new Error()) === '[object Error]';   //true
-Object.prototype.toString.call(document) === '[object HTMLDocument]';   //true
-Object.prototype.toString.call(window) === '[object Window]';   //true
-```
-> **类型判断小结：**
-> * 1）typeof 更适合判断基本类型数据，因为对于引用类型数据，typeof 只会返回 ‘function’ 或 ‘object’，不会返回其他的数组等类型；
-> * 2）instanceof 只能用来判断实例类型，包括 Array、Date 等，判断基本类型会永远返回 true，无意义；
-> * 3）constructor 不能用来判断 Null 及 Undefined 类型
-> * 4）注：new String()、new Number() 生成的实际上为对象，但只能通过 typeof 能判断出来，constructor 和 .toString 只会返回 String 或 Number，无法判断是基本类型或是引用类型。
-
+**hasOwnProperty：** 
+> 只判断对象本身是否包含某属性，不去其原型链中寻找。

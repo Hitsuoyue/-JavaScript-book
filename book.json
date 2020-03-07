@@ -1,4 +1,12 @@
 {
     "title": "book test",
-    "author": "sylvia"
+    "author": "sylvia",
+    "plugins": [
+        "fontsettings",
+        "sharing",
+        "lunr",
+        "search",
+        "highlight",
+        "livereload"
+    ]
 }

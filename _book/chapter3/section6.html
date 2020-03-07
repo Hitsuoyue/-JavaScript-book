@@ -1,0 +1,557 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3.6 模拟面向对象的类 · book test</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="sylvia">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="section7.html" />
+    
+    
+    <link rel="prev" href="section5.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    1. 变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    2. 数据类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/section1.html">
+            
+                <a href="../chapter2/section1.html">
+            
+                    
+                    2.1 基本类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/section2.html">
+            
+                <a href="../chapter2/section2.html">
+            
+                    
+                    2.2 引用类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/section3.html">
+            
+                <a href="../chapter2/section3.html">
+            
+                    
+                    2.3 变量赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    3. 原型、继承
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="section3.1/section1.html">
+            
+                <a href="section3.1/section1.html">
+            
+                    
+                    3.1 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="section3.2/">
+            
+                <a href="section3.2/">
+            
+                    
+                    3.2 构造函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="section3.2/section1.html">
+            
+                <a href="section3.2/section1.html">
+            
+                    
+                    3.2.1 Function
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="section3.2/section2.html">
+            
+                <a href="section3.2/section2.html">
+            
+                    
+                    3.2.2 Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="section3.2/section3.html">
+            
+                <a href="section3.2/section3.html">
+            
+                    
+                    3.2.3 Date
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="section3.2/section4.html">
+            
+                <a href="section3.2/section4.html">
+            
+                    
+                    3.2.4 RegExp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="section3.2/section5.html">
+            
+                <a href="section3.2/section5.html">
+            
+                    
+                    3.2.5 Number、String、Boolean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="section3.2/section6.html">
+            
+                <a href="section3.2/section6.html">
+            
+                    
+                    3.2.6 Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="section3.html">
+            
+                <a href="section3.html">
+            
+                    
+                    3.3 原型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="section4.html">
+            
+                <a href="section4.html">
+            
+                    
+                    3.4 原型链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="section5.html">
+            
+                <a href="section5.html">
+            
+                    
+                    3.5 判断数据类型(构造函数、原型、typeof)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.6" data-path="section6.html">
+            
+                <a href="section6.html">
+            
+                    
+                    3.6 模拟面向对象的类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="section7.html">
+            
+                <a href="section7.html">
+            
+                    
+                    3.7 ES6 中的 Class
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >3.6 模拟面向对象的类</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="36-&#x6A21;&#x62DF;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;">3.6 &#x6A21;&#x62DF;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x7C7B;</h3>
+<p><strong>&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x7F16;&#x7A0B;&#x4E2D;&#x7684;&#x7C7B;&#xFF1A;</strong> &#x662F;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x7684;&#x53EF;&#x6269;&#x5C55;&#x7684;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#x6A21;&#x7248;&#xFF0C;&#x5B83;&#x4E3A;&#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x4E86;&#x72B6;&#x6001;&#xFF08;&#x6210;&#x5458;&#x53D8;&#x91CF;&#xFF09;&#x7684;&#x521D;&#x59CB;&#x503C;&#x548C;&#x884C;&#x4E3A;&#xFF08;&#x6210;&#x5458;&#x51FD;&#x6570;&#x548C;&#x65B9;&#x6CD5;&#xFF09;&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>ES6 &#x4E2D;&#x5C01;&#x88C5;&#x4E86; class&#xFF0C;&#x5728; ES6 &#x4E2D;&#x7684; class &#x51FA;&#x73B0;&#x524D;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5176;&#x4ED6;&#x7684;&#x7F16;&#x7A0B;&#x6A21;&#x5F0F;&#x6765;&#x521B;&#x5EFA;&#x7C7B;&#x3002;</p>
+<h4 id="361-&#x57FA;&#x4E8E;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x7C7B;">3.6.1 &#x57FA;&#x4E8E;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x7C7B;</h4>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span>(<span class="hljs-params">name, age</span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getAge</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">return</span> age + <span class="hljs-number">10</span>;
+    } 
+    <span class="hljs-keyword">this</span>.outputInfo = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;name&#xFF1A;&apos;</span>, name, <span class="hljs-string">&apos;currentAge: &apos;</span>, getAge())
+    }
+}
+<span class="hljs-keyword">let</span> jane = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&apos;jane&apos;</span>, <span class="hljs-number">14</span>);
+jane.outputInfo()     <span class="hljs-comment">//name&#xFF1A; jane currentAge:  24</span>
+</code></pre>
+<ul>
+<li><p><strong>&#x4F18;&#x70B9;&#xFF1A;</strong>
+&#x5982;&#x4E0A;&#xFF0C;<code>getAge</code> &#x65B9;&#x6CD5;&#x662F;&#x5916;&#x90E8;&#x4E0D;&#x53EF;&#x89C1;&#x7684;&#xFF08;&#x79C1;&#x6709;&#x7684;&#xFF09;&#xFF0C;&#x53EF;&#x9690;&#x85CF;&#x5185;&#x90E8;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#xFF1B;&#x800C; <code>outputInfo</code> &#x88AB;&#x5206;&#x914D;&#x5230; <code>this</code> &#x4E0A;&#xFF0C;&#x5219;&#x662F;&#x5916;&#x90E8;&#x53EF;&#x89C1;&#x7684;&#xFF08;&#x5373;&#x516C;&#x6709;&#x7684;&#xFF09;&#xFF0C;&#x7528;&#x6B64;&#x6784;&#x9020;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5171;&#x6709;&#x65B9;&#x6CD5;&#x3002;</p>
+</li>
+<li><p><strong>&#x7F3A;&#x70B9;&#xFF1A;</strong>
+&#x6240;&#x6709;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5185;&#x90E8;&#xFF0C;&#x6BCF;&#x6B21; new &#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x90FD;&#x4F1A;&#x521B;&#x5EFA;&#x5185;&#x90E8;&#x7684;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#xFF0C;&#x4E14;&#x4E0D;&#x540C;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x95F4;&#x4E0D;&#x80FD;&#x5171;&#x4EAB;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#xFF0C;&#x6D6A;&#x8D39;&#x5185;&#x5B58;&#x8D44;&#x6E90;&#x3002;</p>
+</li>
+</ul>
+<h4 id="362-&#x57FA;&#x4E8E;&#x539F;&#x578B;&#x7684;&#x7C7B;">3.6.2 &#x57FA;&#x4E8E;&#x539F;&#x578B;&#x7684;&#x7C7B;</h4>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span>(<span class="hljs-params">name, age</span>) </span>{
+    <span class="hljs-keyword">this</span>.name = name;
+    <span class="hljs-keyword">this</span>.age = age;
+}
+Person.prototype._getAge = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.age + <span class="hljs-number">10</span>;
+}
+
+Person.prototype.outputInfo = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;name&#xFF1A;&apos;</span>, <span class="hljs-keyword">this</span>.name, <span class="hljs-string">&apos;currentAge: &apos;</span>, <span class="hljs-keyword">this</span>._getAge())
+}
+<span class="hljs-keyword">let</span> jane = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&apos;jane&apos;</span>, <span class="hljs-number">14</span>);
+jane.outputInfo()     <span class="hljs-comment">//name&#xFF1A; jane currentAge:  24</span>
+</code></pre>
+<ul>
+<li><strong>&#x4F18;&#x70B9;&#xFF1A;</strong>
+&#x5982;&#x4E0A;&#xFF0C;&#x5C06;&#x516C;&#x5171;&#x65B9;&#x6CD5;&#x653E;&#x5728;&#x539F;&#x578B;&#x4E2D;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x5BF9;&#x8C61;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x539F;&#x578B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5BF9;&#x8C61;&#x4E2D;&#x6CA1;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x539F;&#x578B;&#x94FE;&#x4E2D;&#x5BFB;&#x627E;&#x3002;</li>
+</ul>
+<!-- 
+#### 3.6.2 工厂类模式
+```javascript
+function Person(name, age) {
+    function getAge() {
+        return age + 10;
+    } 
+    return {
+        info: function () {
+           console.log('name：', name, 'currentAge: ', getAge())
+        }
+    }
+}
+let jane = Person('jane', 14);
+jane.info()     //name： jane currentAge:  24
+```
+如上，这种方法创建一个函数，返回一个对象，里面包含公共方法或公共属性。
+-->
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="section5.html" class="navigation navigation-prev " aria-label="Previous page: 3.5 判断数据类型(构造函数、原型、typeof)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="section7.html" class="navigation navigation-next " aria-label="Next page: 3.7 ES6 中的 Class">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3.6 模拟面向对象的类","level":"1.4.6","depth":2,"next":{"title":"3.7 ES6 中的 Class","level":"1.4.7","depth":2,"path":"chapter3/section7.md","ref":"./chapter3/section7.md","articles":[]},"previous":{"title":"3.5 判断数据类型(构造函数、原型、typeof)","level":"1.4.5","depth":2,"path":"chapter3/section5.md","ref":"./chapter3/section5.md","articles":[]},"dir":"ltr"},"config":{"plugins":["fontsettings","sharing","lunr","search","highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"livereload":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"sylvia","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book test","gitbook":"*"},"file":{"path":"chapter3/section6.md","mtime":"2019-11-10T04:58:34.147Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-01T11:30:08.794Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+

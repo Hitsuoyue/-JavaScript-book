@@ -1,3 +1,29 @@
-# Introduction
-## fdsafdsfsaf
+* [概述](README.md)
+* [1. 变量](./chapter1/README.md)
+* [2. 数据类型](./chapter2/README.md)
+    * [2.1 基本类型](./chapter2/section1.md)
+    * [2.2 引用类型](./chapter2/section2.md)
+    * [2.3 变量赋值](./chapter2/section3.md)
+* [3. 原型、继承](./chapter3/README.md)
+    * [3.1 函数](./chapter3/section3.1/section1.md)
+    * [3.2 构造函数](./chapter3/section3.2/README.md)
+        * [3.2.1 Function](./chapter3/section3.2/section1.md)
+        * [3.2.2 Array](./chapter3/section3.2/section2.md)
+        * [3.2.3 Date](./chapter3/section3.2/section3.md)
+        * [3.2.4 RegExp](./chapter3/section3.2/section4.md)
+        * [3.2.5 Number、String、Boolean](./chapter3/section3.2/section5.md)
+        * [3.2.6 Math](./chapter3/section3.2/section6.md)
+    * [3.3 原型](./chapter3/section3.md) 
+    * [3.4 原型链](./chapter3/section4.md)  
+    * [3.5 判断数据类型(构造函数、原型、typeof)](./chapter3/section5.md) 
+    * [3.6 模拟面向对象的类](./chapter3/section6.md) 
+    * [3.7 ES6 中的 Class](./chapter3/section7.md)   
+
+
+<!-- #### [2.1 基本类型](./section1.md)
+#### [2.2 引用类型](./section2.md)
+#### [2.3 变量赋值](./section3.md) -->
+
+
+
 
